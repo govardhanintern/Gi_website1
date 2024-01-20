@@ -13,8 +13,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <style>
-   
-   
 
         .hidden {
             display: none;
@@ -24,12 +22,46 @@
             /* Add your styles for rotation here */
         }
 
+        .foot_li {
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .foot_li a.active {
+      background-color: white;
+      padding: 5px;
+      border-radius: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
 </style>
+<script>
+    function handleClick2(event) {
+      // Check if the clicked element is an <a> tag
+      if (event.target.tagName === 'A') {
+        // Remove the 'active' class from all <a> elements
+        var allAElements = document.querySelectorAll('.foot_li a');
+        allAElements.forEach(function(a) {
+          a.classList.remove('active');
+        });
+
+        // Toggle the 'active' class on the clicked <a> element
+        event.target.classList.toggle('active');
+      }
+    }
+
+    // Attach the click event to the <ul> element
+    document.querySelector('ul').addEventListener('click', handleClick2);
+  </script>
+
 
 <body>
 
-    <div id="home">
+    <div id="home" class="">
         <div class="container absolute h-[100vh] z-1 bg-transparent sm:mt-96">
             <nav class="fixed bg-neutral-800 w-full z-20 top-0 start-0 " id="navbar">
                 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -37,7 +69,7 @@
                         <img src="./assets/images/logo.png" class="h-8" alt="Logo">
                         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Govardhan
                             Infotech</span>
-                    </a>
+                    </a>    
                     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                         <button data-collapse-toggle="navbar-sticky" type="button"
                             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -50,11 +82,11 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+                    <div class="nav_div justify-between hidden w-full md:flex md:w-auto md:order-1"
                         id="navbar-sticky">
                         <ul
-                            class="flex flex-col xl:text-[20px] lg:text-[20px] md:text-[16px] p-4 md:p-0 mt-4 font-medium rounded-lg xl:space-x-20 lg:space-x-20 md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0">
-                            <li class="arc1 hover:bg-white">
+                            class="flex flex-col xl:text-[20px] lg:text-[20px] md:text-[16px] p-4 md:p-0 mt-4 font-medium rounded-lg xl:space-x-20 lg:space-x-20 md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0 ">
+                            <li class="arc1 hover:bg-white ">
                                 <a href="#home"
                                     class=" block py-2 px-3 active md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-red md:dark:hover:bg-transparent dark:border-gray-700"
                                     style="font-family: 'SuisseIntl'" aria-current="page">Home</a>
@@ -122,16 +154,16 @@
         </video>
     </div>
 
-    <div class="md:mt-20 w-full flex justify-center items-center md:pt-20 lg:pt-24 xl:pt-24 md:pb-20 lg:pb-24 xl:pb-24"
+    <div class=" md:mt-20 w-full flex justify-center items-center md:pt-20 lg:pt-24 xl:pt-24 md:pb-20 lg:pb-24 xl:pb-24"
         id="about">
-        <div class="w-3/4">
-            <h1 class=" md:text-2xl lg:text-3xl xl:text-5xl text-[#9c04fc] font-medium">How we collaborate with you</h1>
+        <div class="w-3/4 ">
+            <h1 class="how_col_text md:text-2xl lg:text-3xl xl:text-5xl text-[#9c04fc] font-medium">How we collaborate with you</h1>
 
             <div
                 class="card md:mt-16 lg:mt-32 xl:mt-32 xl:grid xl:grid-flow-col xl:grid-rows-2 xl:gap-10 lg:grid lg:grid-flow-col lg:grid-rows-4 lg:gap-8 md:grid md:grid-flow-col md:grid-rows-4 md:gap-8">
 
-                <div
-                    class="card1 shadow-2xl p-2 rounded-md flex flex-col md:flex-row justify-center items-center gap-8">
+                <div 
+                    class=" card1 shadow-2xl p-2 rounded-md flex flex-col md:flex-row justify-center items-center gap-8">
                     <img src="./assets/images/collaborate1.png" alt="">
                     <div class="card_details flex flex-col justify-left items-left gap-5">
                         <h2 class="text-3xl text-[#9c04fc]">Thinking big</h2>
@@ -174,7 +206,7 @@
         </div>
     </div>
 
-    <div class="bg-[#E3C8FF] w-full flex justify-center items-center pt-24 pb-24" id="services">
+    <div class="how_div bg-[#E3C8FF] w-full flex justify-center items-center pt-24 pb-24" id="services">
         <div class="w-3/4 grid justify-items-stretch">
             <h1 class="md:text-2xl lg:text-3xl xl:text-5xl font-medium">How we can help you</h1>
             <hr class="mt-10 border-gray-500 border-1">
@@ -372,25 +404,25 @@
                     </p>
                 </div>
 
-                <div class="footer-links">
+                <div class="footer-links ml-4">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                    </ul>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)" href="#">Home</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)" href="#">About us</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)" href="#">Services</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)" href="#">Terms of service</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)" href="#">Privacy policy</a></li>
+                      </ul>
                 </div>
 
                 <div class="footer-links">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"  href="#">Web Design</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)" href="#">Web Development</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)" href="#">Product Management</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)" href="#">Marketing</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)" href="#">Graphic Design</a></li>
                     </ul>
                 </div>
 
@@ -496,7 +528,7 @@
                 
             });
         }
-        }
+  }
 
         function closeAllDivs(currentParaDiv){
             const allParaDivs = document.querySelectorAll('.para_div');

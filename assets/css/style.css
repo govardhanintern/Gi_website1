@@ -337,7 +337,6 @@ nav a.active {
 
 
 .container {
-  
   display: flex;
   flex-direction: column; /* Arrange children vertically */
 }
@@ -373,7 +372,7 @@ nav a.active {
  } */
 
 
- 
+
 
  @media screen and (max-width: 1210px){
       /* .text1{
@@ -390,10 +389,72 @@ nav a.active {
         font-size: x-large;
         margin-top: -100px;
       }
-       
-      
-
  } 
+
+ @media screen and (max-width: 320px) {
+  .card1, .card2, .card3, .card4 {
+    margin-bottom: 50px;
+  }
+  
+  .card1{
+    margin-top: 50px;
+  }
+
+  .how_col_text{
+    margin-top: 50px;
+  }
+
+  .nav_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 765px) {
+  .card1, .card2, .card3, .card4 {
+    margin-bottom: 50px;
+  }
+
+  .card1{
+    margin-top: 50px;
+  }
+
+  .how_col_text{
+    margin-top: 50px;
+  }
+
+  .nav_div ul li:hover{
+    width: 650px;
+  }
+
+  .nav_div ul li a:hover{
+    color: black;
+    border-radius: 10px;
+    padding: 3px;
+  }
+}
+
+@media screen and (min-width:534px) and (max-width:715px) {
+  .nav_div ul li:hover{
+    width: 500px;
+  }
+}
+@media screen and (min-width:430px) and (max-width:533px) {
+  .nav_div ul li:hover{
+    width: 400px;
+  }
+}
+@media screen and (min-width:340px) and (max-width:431px) {
+  .nav_div ul li:hover{
+    width: 300px;
+  }
+}
+@media screen and (min-width:200px) and (max-width:339px) {
+  .nav_div ul li:hover{
+    width: 200px;
+  }
+}
 
  @media screen and (max-width: 980px) and (min-width:790px){
           .text1{
@@ -420,6 +481,7 @@ nav a.active {
     font-size: 25px;
     margin-top: -300px;
   }
+ 
 } 
 
 
@@ -456,11 +518,11 @@ nav a.active {
     font-size: 18px ;
     /* margin-bottom: -100px; */
     text-align: center;
-    margin-top: 30px;
+    margin-top: 45px;
   }
   .text2{
     font-size: 18px;
-    margin-top: 95px;
+    margin-top: 110px;
   }
  
 } 
