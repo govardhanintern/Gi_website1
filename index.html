@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    .hidden {
+        display: none;
+    }
+
+    .rotate-180 {
+        /* Add your styles for rotation here */
+    }
+
+    .foot_li {
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .foot_li a.active {
+        background-color: white;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+</style>
+<script>
+    function handleClick2(event) {
+        // Check if the clicked element is an <a> tag
+        if (event.target.tagName === 'A') {
+            // Remove the 'active' class from all <a> elements
+            var allAElements = document.querySelectorAll('.foot_li a');
+            allAElements.forEach(function (a) {
+                a.classList.remove('active');
+            });
+
+            // Toggle the 'active' class on the clicked <a> element
+            event.target.classList.toggle('active');
+        }
+    }
+
+    // Attach the click event to the <ul> element
+    document.querySelector('ul').addEventListener('click', handleClick2);
+</script>
+
+
+<body>
+
+    <div id="home" class="">
+        <div class="container absolute h-[100vh] z-1 bg-transparent sm:mt-96">
+            <nav class="fixed bg-neutral-800 w-full z-20 top-0 start-0 " id="navbar">
+                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="./assets/images/logo.png" class="h-8" alt="Logo">
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Govardhan
+                            Infotech</span>
+                    </a>
+                    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <button data-collapse-toggle="navbar-sticky" type="button"
+                            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                            aria-controls="navbar-sticky" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="nav_div justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                        <ul
+                            class="flex flex-col xl:text-[20px] lg:text-[20px] md:text-[16px] p-4 md:p-0 mt-4 font-medium rounded-lg xl:space-x-20 lg:space-x-20 md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0 ">
+                            <li class="arc1 hover:bg-white ">
+                                <a href="#home"
+                                    class=" block py-2 px-3 active md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-red md:dark:hover:bg-transparent dark:border-gray-700"
+                                    style="font-family: 'SuisseIntl'" aria-current="page">Home</a>
+                            </li>
+                            <li class="arc1 hover:bg-white">
+                                <a href="#about"
+                                    class=" block py-2 px-3 text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-red md:dark:hover:bg-transparent dark:border-gray-700"
+                                    style="font-family: 'SuisseIntl'">About</a>
+                            </li>
+                            <li class="arc1 hover:bg-white">
+                                <a href="#services"
+                                    class="  block py-2 px-3 text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-red md:dark:hover:bg-transparent dark:border-gray-700"
+                                    style="font-family: 'SuisseIntl'">Services</a>
+                            </li>
+                            <li class="arc1 hover:bg-white">
+                                <a href="#contact"
+                                    class="block py-2 px-3 text-white hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-red md:dark:hover:bg-transparent dark:border-gray-700"
+                                    style="font-family: 'SuisseIntl'">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container">
+                <div class="text2 bg-transparent flex justify-center">
+                    <div class="">
+                        <span class="text-white lg:text-1xl xl:text-3xl font-bold mb-2 mr-2">We think</span><span
+                            class="text-[#cc7afc] lg:text-1xl xl:text-3xl font-bold mb-2" id="spanContent">new</span>
+                    </div>
+                </div>
+
+                <div class="text1">
+                    <p class="text-[#cc7afc] font-bold">Next-gen enterprise</p>
+                    <p class="inner-text1 text-white font-bold">software development company</p>
+                </div>
+            </div>
+
+
+            <!-- this i comment for tailwind properties  -->
+
+            <!-- <div class="text1">    
+                <p class="text-[#cc7afc] font-bold">Next-gen enterprise</p>
+                <p class="text-white font-bold">software development company</p>
+            </div>  -->
+
+            <!-- <div class=" bg-transparent md:mt-28 lg:mt-28 xl:mt-28 ml-32 flex justify-between">
+                <div class="text2">
+                    <span class="text-white lg:text-1xl xl:text-3xl font-bold mb-2 mr-2">We think</span><span
+                        class="text-[#cc7afc] lg:text-1xl xl:text-3xl font-bold mb-2" id="spanContent">new</span>
+                </div>
+
+                <button
+                    class="btn1 md:h-12 lg:h-14 xl:h-14 md:w-1/4 lg:w-1/4 xl:w-96 bg-[#cc7afc] mr-28 text-white text-2xl">Let's
+                    talk</button>
+                <button class="btn1 bg-[#cc7afc] mr-28 text-white text-2xl">Let's
+                    talk</button>
+            </div> -->
+
+
+        </div>
+
+        <video autoplay loop plays-inline muted class="video w-full h-full z-[-1]  xl:mt-0">
+            <source src="./assets/video/newVideo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class=" md:mt-20 w-full flex justify-center items-center md:pt-20 lg:pt-24 xl:pt-24 md:pb-20 lg:pb-24 xl:pb-24"
+        id="about">
+        <div class="w-3/4 ">
+            <h1 class="how_col_text md:text-2xl lg:text-3xl xl:text-5xl text-[#9c04fc] font-medium">How we collaborate
+                with you</h1>
+
+            <div
+                class="card md:mt-16 lg:mt-32 xl:mt-32 xl:grid xl:grid-flow-col xl:grid-rows-2 xl:gap-10 lg:grid lg:grid-flow-col lg:grid-rows-4 lg:gap-8 md:grid md:grid-flow-col md:grid-rows-4 md:gap-8">
+
+                <div
+                    class=" card1 shadow-2xl p-2 rounded-md flex flex-col md:flex-row justify-center items-center gap-8">
+                    <img src="./assets/images/collaborate1.png" alt="">
+                    <div class="card_details flex flex-col justify-left items-left gap-5">
+                        <h2 class="text-3xl text-[#9c04fc]">Thinking big</h2>
+                        <p class="text-1xl text-black">After digging deep to understand holistically your challenges
+                            and business objectives, we chart your technology path that will keep your business
+                            future-proof.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="card2 shadow-2xl p-4 rounded-md flex flex-col md:flex-row justify-center items-center gap-8">
+                    <img src="./assets/images/collaborate2.png" alt="">
+                    <div class="card_details flex flex-col justify-left items-left gap-5">
+                        <h2 class="text-3xl text-[#9c04fc]">Starting small</h2>
+                        <p class="text-1xl text-black">At the beginning of the transformation journey, we start with
+                            simple use cases that bring you immediate results.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="card3 shadow-2xl p-4 rounded-md flex flex-col md:flex-row justify-center items-center gap-8">
+                    <img src="./assets/images/collaborate3.png" alt="">
+                    <div class="card_details flex flex-col justify-left items-left gap-5">
+                        <h2 class="text-3xl text-[#9c04fc]">Creating value fast</h2>
+                        <p class="text-1xl text-black">We then build an MVP, testing the first use cases and
+                            collecting feedback. Along the way, we introduce enhancements to align business deliverables
+                            and add new use cases.</p>
+                    </div>
+                </div>
+                <div
+                    class="card4 shadow-2xl p-4 rounded-md flex flex-col md:flex-row justify-center items-center gap-8">
+                    <img src="./assets/images/collaborate4.png" alt="">
+                    <div class="card_details flex flex-col justify-left items-left gap-5">
+                        <h2 class="text-3xl text-[#9c04fc]">Innovating at scale</h2>
+                        <p class="text-1xl text-black">We are expanding the functionality of your system, keeping it
+                            flexible on the tech stack, hugely adaptable to humans, and easily scalable to evolve along
+                            with your business growth.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="how_div bg-[#E3C8FF] w-full flex justify-center items-center pt-24 pb-24" id="services">
+        <div class="w-3/4 grid justify-items-stretch">
+            <h1 class="md:text-2xl lg:text-3xl xl:text-5xl font-medium">How we can help you</h1>
+            <hr class="line_cur mt-10 border-gray-500 border-1">
+            <div id="cur_div1"
+                class="cur_div mt-6 flex justify-between items-center pl-4 pr-4 cursor-pointer transition duration-1000 ease-in-out">
+                <img src="./assets/images/accord_1-1.gif" height="50" width="35" alt="" srcset="">
+                <div class="flex justify-left items-center md:pl-[55px] lg:pl-[310px] xl:pl-[468px] gap-[20px]">
+                    <p class="font-medium md:text-1xl lg:text-1xl xl:text-2xl">01</p>
+                    <h3 class="font-bold md:text-2xl lg:text-2xl xl:text-3xl">Innovation Consulting</h3>
+                </div>
+                <img id="RotDiv" class="rot_img" src="./assets/images/accord_arrow_up.svg" height="38" width="15" alt=""
+                    srcset="">
+            </div>
+
+            <div id="para_div1"
+                class="para_div w-72 mt-10 justify-self-end mr-28 hidden  transition duration-1000 ease-in-out">
+                <p>Make your digital transformation journey super simple, safe, and aligned with your specific business
+                    needs. We're good at strategy planning for both enterprises and SMBs, IT audit, business process
+                    analysis, and more.</p>
+            </div>
+
+            <hr class="line_cur mt-6 border-gray-500 border-1">
+            <div id="cur_div2"
+                class="cur_div mt-6 flex justify-between items-center pl-4 pr-4 cursor-pointer transition duration-500 ease-in-out">
+                <img src="./assets/images/accord_2-2.gif" height="50" width="35" alt="" srcset="">
+                <div class="flex justify-left items-center md:pl-[60px] lg:pl-[318px] xl:pl-[474px] gap-[20px]">
+                    <p class="font-medium md:text-1xl lg:text-1xl xl:text-2xl">02</p>
+                    <h3 class="font-bold md:text-2xl lg:text-2xl xl:text-3xl">Digital Transformation</h3>
+                </div>
+
+                <img id="RotDiv2" class="rot_img" src="./assets/images/accord_arrow_up.svg" height="38" width="15"
+                    alt="" srcset="">
+
+            </div>
+            <div id="para_div2"
+                class="para_div w-72 mt-10 justify-self-end mr-28 hidden transition duration-500 ease-in-out">
+                <p>Achieve lower costs, utmost scalability and maximum velocity with our legacy software
+                    modernization, cloud, and DevOps services. Our enterprise software development company is here
+                    to help you remove the roadblocks to innovation.
+                </p>
+            </div>
+
+            <hr class="line_cur mt-6 border-gray-500 border-1">
+            <div id="cur_div3"
+                class="cur_div  mt-6 flex justify-between items-center pl-4 pr-4 cursor-pointer transition duration-500 ease-in-out">
+                <img src="./assets/images/accord_3-2.gif" height="50" width="35" alt="" srcset="">
+                <div class="flex justify-left items-center md:pl-[50px] lg:pl-[305px] xl:pl-[462px] gap-[20px]">
+                    <p class="font-medium md:text-1xl lg:text-1xl xl:text-2xl">03</p>
+                    <h3 class="font-bold md:text-2xl lg:text-2xl xl:text-3xl">Software Engineering</h3>
+                </div>
+                <img id="RotDiv3" class="rot_img" src="./assets/images/accord_arrow_up.svg" height="38" width="15"
+                    alt="" srcset="">
+            </div>
+
+
+            <div id="para_div3"
+                class="para_div  w-72 mt-10 justify-self-end mr-28 hidden transition duration-500 ease-in-out">
+                <p>Build enterprise software solutions that perform. We can cover you along the whole way or fill in
+                    specific skill gaps in business analysis, UX/UI, testing, development, or support across web,
+                    mobile, desktop, cloud, and embedded platforms.</p>
+            </div>
+
+            <hr class="line_cur mt-6 border-gray-500 border-1">
+            <div id="cur_div4"
+                class="cur_div mt-6 flex justify-between items-center pl-4 pr-4 cursor-pointer transition duration-500 ease-in-out">
+                <img src="./assets/images/accord_4-1.gif" height="50" width="35" alt="" srcset="">
+                <div class="flex justify-left items-center md:pl-[40px] lg:pl-[295px] xl:pl-[450px] gap-[20px]">
+                    <p class="font-medium md:text-1xl lg:text-1xl xl:text-2xl">04</p>
+                    <h3 class="font-bold md:text-2xl lg:text-2xl xl:text-3xl">Big Data & Analytics</h3>
+                </div>
+                <img id="RotDiv4" class="rot_img" src="./assets/images/accord_arrow_up.svg" height="38" width="15"
+                    alt="" srcset="">
+            </div>
+
+
+            <div id="para_div4"
+                class="para_div w-72 mt-10 justify-self-end mr-28 hidden transition duration-500 ease-in-out">
+                <p>Use your torrents of data to drive decision-making across the company. From Data Governance &
+                    Data Management to Data Analytics and Data Science, we make business, not IT, own your data.</p>
+            </div>
+
+            <hr class="line_cur mt-6 border-gray-500 border-1">
+            <div id="cur_div5"
+                class="cur_div mt-6 flex justify-between items-center pl-4 pr-4 cursor-pointer transition duration-500 ease-in-out">
+                <img src="./assets/images/accord_5-2.gif" height="50" width="35" alt="" srcset="">
+                <div class="flex justify-left items-center md:pl-[45px] lg:pl-[300px] xl:pl-[455px] gap-[20px]">
+                    <p class="font-medium md:text-1xl lg:text-1xl xl:text-2xl">05</p>
+                    <h3 class="font-bold md:text-2xl lg:text-2xl xl:text-3xl">Artificial Intelligence</h3>
+                </div>
+                <img id="RotDiv5" class="rot_img" src="./assets/images/accord_arrow_up.svg" height="38" width="15"
+                    alt="" srcset="">
+
+            </div>
+            <div id="para_div5"
+                class="para_div w-72 mt-10 justify-self-end mr-28 hidden transition duration-500 ease-in-out">
+                <p>Implement AI to beat real-world business challenges and meet your KPIs, getting beyond the hype.
+                    From ML, NLP, and Computer Vision to integration of AI technologies for Intelligent Automation,
+                    we’ve done it all for our delighted clients.</p>
+            </div>
+
+            <hr class="line_cur mt-6 border-gray-500 border-1">
+            <div id="cur_div6"
+                class="cur_div mt-6 flex justify-between items-center pl-4 pr-4 cursor-pointer md:gap-[100px] transition duration-500 ease-in-out">
+                <img src="./assets/images/accord_6-2.gif" height="50" width="35" alt="" srcset="">
+                <div class="flex justify-left items-center lg:pl-[250px] xl:pl-[395px] gap-[20px]">
+                    <p class="font-medium md:text-1xl lg:text-1xl xl:text-2xl">06</p>
+                    <h3 class="font-bold md:text-2xl lg:text-2xl xl:text-3xl">Extended Reality</h3>
+                </div>
+                <img id="RotDiv6" class="rot_img" src="./assets/images/accord_arrow_up.svg" height="38" width="15"
+                    alt="" srcset="">
+
+            </div>
+
+            <div id="para_div6"
+                class="para_div w-72 mt-10 justify-self-end mr-28 hidden transition duration-500 ease-in-out">
+                <p>
+                    Deliver immersive experiences through AR, VR, or MR to create new products, boost productivity,
+                    or launch into the metaverse. XR solutions help you bypass distance challenges and be innovative
+                    for real.
+                </p>
+            </div>
+
+            <hr class="line_cur mt-6 border-gray-500 border-1">
+        </div>
+    </div>
+
+    <div class="pt-4 pb-28 contact" id="contact">
+
+        <div class="text-4xl font-bold mt-16 mb-10 text-center">
+            <h2>Contact</h2>
+        </div>
+
+        <div
+            class="md:flex md:flex-col md:justify-center lg:flex lg:flex-row lg:justify-center xl:flex xl:flex-row:justify-center gap-6 pl-8 pr-8">
+            <div class="md:w-full lg:w-[38%] xl:w-[38%]">
+                <div class="">
+                    <div class="info ">
+                        <div class="address ">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4 class="lg:text-[18px] xl:text-[22px]">Location:</h4>
+                            <p>Govardhan Infotech, F-123 Atlanta Shopping Mall, Althan Canal Road, Althan,Surat,Gujarat
+                                395017</p>
+                        </div>
+
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4 class="lg:text-[18px] xl:text-[22px]">Email:</h4>
+                            <p>infotechg87@gmail.com</p>
+                        </div>
+
+                        <div class="phone">
+                            <i class="bi bi-phone"></i>
+                            <h4 class="lg:text-[18px] xl:text-[22px]">Call:</h4>
+                            <p>+91 7777 95 68 77</p>
+                        </div>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14885.323196400037!2d72.79197644837987!3d21.13922978860295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0521d332c148d%3A0xc189b1d8cb5162b!2sGovardhan%20Infotech!5e0!3m2!1sen!2sin!4v1704092354223!5m2!1sen!2sin"
+                            frameborder="0" class="w-full md:h-[235px] lg:h-[290px] xl:h-[290px]" style="border:0;"
+                            allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+            <div class="md:w-full lg:w-[58%] xl:w-[58%]">
+                <div class="flex">
+                    <form action="" method="post" role="form" class="email-form">
+                        <div class="flex justify-center items-center gap-5">
+                            <div class="w-[50%] flex flex-col justify-left items-left">
+                                <label for="name">Your Name</label>
+                                <input type="text" name="name" class="form-control" id="name" required>
+                            </div>
+                            <div class="w-[50%] flex flex-col justify-left items-left">
+                                <label for="name">Your Email</label>
+                                <input type="email" class="form-control" name="email" id="email" required>
+                            </div>
+                        </div>
+
+                        <div class="mt-10 w-full flex flex-col justify-left items-left">
+                            <label for="name">Subject</label>
+                            <input type="text" class="form-control" name="subject" id="subject" required>
+                        </div>
+
+                        <div class="mt-10 flex flex-col justify-left items-left">
+                            <label for="name">Message</label>
+                            <textarea class="form-control" name="message" rows="10" required></textarea>
+                        </div>
+
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+
+                        <div class="text-center mt-10"><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <!-- <div class="container"> -->
+            <div class="md:grid md:grid-cols-2 lg:grid lg:grid-cols-4 xl:grid xl:grid-cols-4 p-8">
+                <!-- <div class="flex justify-around items-top gap-4"> -->
+
+                <div class="footer-contact">
+                    <h4 class="md:text-[24px] lg:text-[24px] xl:text-[28px]">Govardhan Infotech</h4>
+                    <p>
+                        F-123 Atlanta Shopping Mall <br>
+                        Althan Canal Road<br>
+                        Althan,Surat,Gujarat 395017s <br><br>
+                        <strong>Phone:</strong> +91 7777 95 68 77<br>
+                        <strong>Email:</strong> infotechg87@gmail.com<br>
+                    </p>
+                </div>
+
+                <div class="useful_link_div footer-links ml-4">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"
+                                href="#">Home</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"
+                                href="#">About us</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"
+                                href="#">Services</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"
+                                href="#">Terms of service</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"
+                                href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"
+                                href="#">Web Design</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"
+                                href="#">Web Development</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"
+                                href="#">Product Management</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"
+                                href="#">Marketing</a></li>
+                        <li class="foot_li"><i class="bx bx-chevron-right"></i> <a onclick="handleClick2(this)"
+                                href="#">Graphic Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Our Social Networks</h4>
+                    <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
+                    <div class="social-links mt-3">
+                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                        <a href="https://www.facebook.com/govardhan.infotech.1/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://www.instagram.com/govardhaninstitute/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
+                        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+
+    <script>
+
+
+        // function toggleDiv(curDiv, paraDiv, RotDiv) {
+        //     // Check if the paraDiv is currently hidden
+        //     const isOpen = !paraDiv.classList.contains('hidden');
+
+        //     // Close all divs
+        //     closeAllDivs();
+
+        //     if (!isOpen) {
+        //         // Toggle the 'hidden' class on paraDiv
+        //         paraDiv.classList.toggle('hidden');
+
+        //         // Toggle the 'rotate-180' class on RotDiv
+        //         RotDiv.classList.toggle('rotate-180');
+
+        //         $('#para_div').slideToggle('slow');
+        //     }
+        // }
+
+        // function closeAllDivs() {
+        //     const allParaDivs = document.querySelectorAll('.para_div');
+        //     const allRotDivs = document.querySelectorAll('[id^="RotDiv"]');
+
+        //     allParaDivs.forEach(div => {
+        //         div.classList.add('hidden');
+        //     });
+
+        //     allRotDivs.forEach(div => {
+        //         div.classList.remove('rotate-180');
+        //     });
+        // }
+
+        // // Add click event listeners to each cur_div with out transition
+        // document.getElementById('cur_div1').addEventListener('click', function() {
+        //     toggleDiv(document.getElementById('cur_div1'), document.getElementById('para_div1'), document.getElementById('RotDiv'));
+        // });
+
+        // document.getElementById('cur_div2').addEventListener('click', function() {
+        //     toggleDiv(document.getElementById('cur_div2'), document.getElementById('para_div2'), document.getElementById('RotDiv2'));
+        // });
+
+        // document.getElementById('cur_div3').addEventListener('click', function() {
+        //     toggleDiv(document.getElementById('cur_div3'), document.getElementById('para_div3'), document.getElementById('RotDiv3'));
+        // });
+
+        // document.getElementById('cur_div4').addEventListener('click', function() {
+        //     toggleDiv(document.getElementById('cur_div4'), document.getElementById('para_div4'), document.getElementById('RotDiv4'));
+        // });
+
+        // document.getElementById('cur_div5').addEventListener('click', function() {
+        //     toggleDiv(document.getElementById('cur_div5'), document.getElementById('para_div5'), document.getElementById('RotDiv5'));
+        // });
+
+        // document.getElementById('cur_div6').addEventListener('click', function() {
+        //     toggleDiv(document.getElementById('cur_div6'), document.getElementById('para_div6'), document.getElementById('RotDiv6'));
+        // });
+
+
+        // here problem solve of open close on same click
+
+
+        function toggleDiv(curDiv, paraDiv, RotDiv) {
+
+            const isOpen = !paraDiv.classList.contains('hidden');
+
+            rotateallimg(RotDiv);
+
+            // Close all divs
+            closeAllDivs(paraDiv);
+
+            if (!isOpen) {
+
+                RotDiv.classList.toggle('rotate-180');
+
+                // Toggle the 'hidden' class on paraDiv after the slideToggle completes
+                $('#para_div').slideToggle('slow', function () {
+                    paraDiv.classList.toggle('hidden');
+
+                });
+            }
+        }
+
+        function closeAllDivs(currentParaDiv) {
+            const allParaDivs = document.querySelectorAll('.para_div');
+
+            allParaDivs.forEach(div => {
+                if (div !== currentParaDiv) {
+
+                    $(div).slideUp('slow', function () {
+
+                        div.classList.add('hidden');
+
+
+
+                    });
+                }
+            });
+
+        }
+
+        function rotateallimg(cur_rot_div) {
+            const allrotdiv = document.querySelectorAll('.rot_img');
+            allrotdiv.forEach(div => {
+                if (div !== cur_rot_div) {
+                    $(div).removeClass('rotate-180');
+                }
+            });
+        }
+
+        // Add click event listeners to each cur_div using jQuery
+        $(document).ready(function () {
+            $('#cur_div1').click(function () {
+                toggleDiv(document.getElementById('cur_div1'), document.getElementById('para_div1'), document.getElementById('RotDiv'));
+                $('#para_div1').slideToggle('slow');
+            });
+
+            $('#cur_div2').click(function () {
+                toggleDiv(document.getElementById('cur_div2'), document.getElementById('para_div2'), document.getElementById('RotDiv2'));
+                $('#para_div2').slideToggle('slow');
+            });
+
+            $('#cur_div3').click(function () {
+                toggleDiv(document.getElementById('cur_div3'), document.getElementById('para_div3'), document.getElementById('RotDiv3'));
+                $('#para_div3').slideToggle('slow');
+            });
+
+            $('#cur_div4').click(function () {
+                toggleDiv(document.getElementById('cur_div4'), document.getElementById('para_div4'), document.getElementById('RotDiv4'));
+                $('#para_div4').slideToggle('slow');
+            });
+
+            $('#cur_div5').click(function () {
+                toggleDiv(document.getElementById('cur_div5'), document.getElementById('para_div5'), document.getElementById('RotDiv5'));
+                $('#para_div5').slideToggle('slow');
+            });
+
+            $('#cur_div6').click(function () {
+                toggleDiv(document.getElementById('cur_div6'), document.getElementById('para_div6'), document.getElementById('RotDiv6'));
+                $('#para_div6').slideToggle('slow');
+            });
+        });
+
+
+
+
+    </script>
+
+    <script>
+
+        // Function to update the content of the span tag
+        function updateSpanContent() {
+            // Get the span element by its id
+            var spanElement = document.getElementById("spanContent");
+
+            // Array of values to cycle through
+            var values = ["new", "future", "value"];
+
+            // Get the current content of the span
+            var currentContent = spanElement.innerHTML;
+
+            // Find the index of the current content in the values array
+            var currentIndex = values.indexOf(currentContent);
+
+            // Calculate the next index
+            var nextIndex = (currentIndex + 1) % values.length;
+
+            // Set the new content of the span
+            spanElement.innerHTML = values[nextIndex];
+        }
+
+        // Set the interval to update the span content every second (1000 milliseconds)
+        setInterval(updateSpanContent, 2000);
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Smooth scrolling when clicking on navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Remove "text-white" class from all navigation links
+                    document.querySelectorAll('a[href^="#"]').forEach(link => {
+                        link.classList.remove('text-white', 'active');
+                    });
+
+                    // Add "active" class to the clicked navigation link
+                    this.classList.add('active');
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Change color of navigation links on manual scroll
+            window.addEventListener('scroll', function () {
+                const navLinks = document.querySelectorAll('nav a');
+                const currentScrollPos = window.scrollY;
+
+                // Change color when scrolling past a section
+                document.querySelectorAll('div[id]').forEach(section => {
+                    const sectionTop = section.offsetTop - 50; // Adjust as needed
+                    const sectionBottom = sectionTop + section.clientHeight;
+
+                    if (currentScrollPos >= sectionTop && currentScrollPos < sectionBottom) {
+                        // Remove "text-white" class from all navigation links
+                        navLinks.forEach(link => {
+                            link.classList.remove('text-white', 'active');
+                        });
+
+                        // Add "active" class to the corresponding navigation link
+                        const correspondingLink = document.querySelector(`nav a[href="#${section.id}"]`);
+                        correspondingLink.classList.add('active');
+                    }
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
